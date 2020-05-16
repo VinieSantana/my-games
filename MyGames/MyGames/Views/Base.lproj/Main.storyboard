@@ -40,16 +40,22 @@
                             <outlet property="delegate" destination="0sD-c1-KVO" id="bS0-CU-yDd"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Lista de Plataformas" id="nbP-8u-2ay"/>
+                    <navigationItem key="navigationItem" title="Lista de Plataformas" id="nbP-8u-2ay">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="vSn-ke-Ovq">
+                            <connections>
+                                <action selector="addConsole:" destination="0sD-c1-KVO" id="mUP-wh-Fv8"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d8u-n6-7bg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-220" y="1111"/>
+            <point key="canvasLocation" x="522" y="412"/>
         </scene>
         <!--Adicionar novo jogo-->
         <scene sceneID="vqN-Ih-CFv">
             <objects>
-                <viewController id="6mW-jl-aVE" sceneMemberID="viewController">
+                <viewController id="6mW-jl-aVE" customClass="AddEditViewController" customModule="MyGames" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="het-iM-iJY">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -92,6 +98,9 @@
                                 <state key="normal" title="ADICIONAR">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="addEditGame:" destination="6mW-jl-aVE" eventType="touchUpInside" id="4tH-kg-tMs"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="En5-9O-57k">
                                 <rect key="frame" x="16" y="416" width="382" height="335"/>
@@ -99,6 +108,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y1C-tQ-zJ4">
                                 <rect key="frame" x="70.5" y="568.5" width="273" height="30"/>
                                 <state key="normal" title="Toque para adicionar a imagem de capa"/>
+                                <connections>
+                                    <action selector="AddEditCover:" destination="6mW-jl-aVE" eventType="touchUpInside" id="xc6-XA-LxH"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -133,10 +145,18 @@
                         <viewLayoutGuide key="safeArea" id="EmQ-NL-GUv"/>
                     </view>
                     <navigationItem key="navigationItem" title="Adicionar novo jogo" id="ihN-YW-uKB"/>
+                    <connections>
+                        <outlet property="btAddEdit" destination="Fqg-2w-ro9" id="axk-A7-YyU"/>
+                        <outlet property="btCover" destination="Y1C-tQ-zJ4" id="1k1-WZ-rZX"/>
+                        <outlet property="dpReleaseDate" destination="8T0-9E-z6K" id="leN-pH-okX"/>
+                        <outlet property="ivCover" destination="En5-9O-57k" id="rKe-h0-bST"/>
+                        <outlet property="tfConsole" destination="w6y-iF-vxf" id="wMb-z0-KL1"/>
+                        <outlet property="tfTitle" destination="3eT-Ol-2bH" id="6wt-Wz-PUe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="74y-fI-Sck" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1284.0579710144928" y="1782.5892857142856"/>
+            <point key="canvasLocation" x="-1316" y="1186"/>
         </scene>
         <!--Plataformas-->
         <scene sceneID="Zz2-PK-Cmb">
@@ -173,7 +193,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="105" id="62M-Ug-SAU">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="105" id="62M-Ug-SAU" customClass="GameTableViewCell" customModule="MyGames" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="105"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="62M-Ug-SAU" id="dN0-OG-ojS">
@@ -214,6 +234,9 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="ivCover" destination="PCU-QR-So1" id="rWL-Gc-nGt"/>
+                                    <outlet property="lbConsole" destination="zb3-Q9-e83" id="deH-cb-bYa"/>
+                                    <outlet property="lbTitle" destination="coI-ex-44x" id="qGp-DR-wcd"/>
                                     <segue destination="DQD-CD-Dn7" kind="show" id="YWn-XC-pjf"/>
                                 </connections>
                             </tableViewCell>
@@ -226,19 +249,19 @@
                     <navigationItem key="navigationItem" title="Lista de Jogos" id="uJP-0L-xW9">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="nk5-Ax-H6P">
                             <connections>
-                                <segue destination="6mW-jl-aVE" kind="show" id="492-TK-xvI"/>
+                                <action selector="addEditGame:" destination="G7i-Eg-0UP" id="RH7-vu-6Mk"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8PB-ni-hgJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1700" y="1111"/>
+            <point key="canvasLocation" x="-1707.2463768115942" y="411.83035714285711"/>
         </scene>
-        <!--View Controller-->
+        <!--Game View Controller-->
         <scene sceneID="Qma-G6-ftC">
             <objects>
-                <viewController id="DQD-CD-Dn7" sceneMemberID="viewController">
+                <viewController id="DQD-CD-Dn7" customClass="GameViewController" customModule="MyGames" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Oyz-A3-vh3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -290,10 +313,16 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="ivCover" destination="WgS-Fd-Bei" id="nDI-j0-Oog"/>
+                        <outlet property="lbConsole" destination="kgz-6x-9gK" id="E7B-vO-qlV"/>
+                        <outlet property="lbReleaseDate" destination="YpF-a5-yaz" id="mpP-W7-IVH"/>
+                        <outlet property="lbTitle" destination="fB0-oC-AmI" id="xu4-Re-EGB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WAJ-PJ-mFf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2194" y="1783"/>
+            <point key="canvasLocation" x="-2112" y="1186"/>
         </scene>
         <!--Jogos-->
         <scene sceneID="5qj-z6-wr6">
@@ -319,7 +348,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MP5-LW-cKO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1700" y="412"/>
+            <point key="canvasLocation" x="-2436" y="412"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="QGf-bs-sVv">
@@ -342,9 +371,6 @@
             <point key="canvasLocation" x="-962.31884057971024" y="-22.098214285714285"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="492-TK-xvI"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <image name="console" width="23" height="23"/>
         <image name="game" width="23" height="23"/>

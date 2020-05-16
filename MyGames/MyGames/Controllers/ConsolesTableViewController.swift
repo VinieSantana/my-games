@@ -20,6 +20,8 @@ class ConsolesTableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
 
+    @IBAction func addConsole(_ sender: UIBarButtonItem) {
+    }
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -32,7 +34,7 @@ class ConsolesTableViewController: UITableViewController {
         return 0
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
 
@@ -40,7 +42,7 @@ class ConsolesTableViewController: UITableViewController {
 
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.

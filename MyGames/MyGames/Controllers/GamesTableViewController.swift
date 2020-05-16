@@ -32,7 +32,7 @@ class GamesTableViewController: UITableViewController {
         return 0
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
 
@@ -40,7 +40,8 @@ class GamesTableViewController: UITableViewController {
 
         return cell
     }
-    */
+    
+
 
     /*
     // Override to support conditional editing of the table view.
@@ -77,7 +78,7 @@ class GamesTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -85,6 +86,6 @@ class GamesTableViewController: UITableViewController {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
     }
-    */
+    
 
 }
