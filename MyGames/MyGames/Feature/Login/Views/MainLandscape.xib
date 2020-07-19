@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="landscape" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainViewController" customModule="MyGames" customModuleProvider="target">
+            <connections>
+                <outlet property="containerViewLandscape" destination="pCL-Xl-N0r" id="FmC-Wu-BMx"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vld-fT-md8">
+                    <rect key="frame" x="44" y="0.0" width="808" height="414"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yMe-1q-NKs">
+                            <rect key="frame" x="0.0" y="0.0" width="739" height="414"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" ambiguous="YES" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="cuc-A9-Agp">
+                                    <rect key="frame" x="17" y="0.0" width="158" height="414"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" secondItem="cuc-A9-Agp" secondAttribute="height" multiplier="1:1" id="hAc-OG-giy"/>
+                                    </constraints>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <constraints>
+                                <constraint firstItem="cuc-A9-Agp" firstAttribute="top" secondItem="yMe-1q-NKs" secondAttribute="top" id="Ruy-HV-Csz"/>
+                                <constraint firstAttribute="bottom" secondItem="cuc-A9-Agp" secondAttribute="bottom" id="UUx-US-pC6"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" horizontalHuggingPriority="251" horizontalCompressionResistancePriority="751" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pCL-Xl-N0r">
+                            <rect key="frame" x="739" y="0.0" width="69" height="414"/>
+                            <subviews>
+                                <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Senha" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="r6R-Hl-oxp">
+                                    <rect key="frame" x="0.0" y="212" width="69" height="34"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </textField>
+                                <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E-mail" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yJ4-Hj-OZw">
+                                    <rect key="frame" x="0.0" y="168" width="69" height="34"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </textField>
+                                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jz4-Nc-JKo">
+                                    <rect key="frame" x="0.0" y="266" width="69" height="31"/>
+                                    <color key="backgroundColor" name="main"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="31" id="71D-9V-Jkr"/>
+                                    </constraints>
+                                    <state key="normal" title="LOGIN">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="pCL-Xl-N0r" secondAttribute="trailing" id="Edu-l3-zYO"/>
+                        <constraint firstItem="pCL-Xl-N0r" firstAttribute="leading" secondItem="yMe-1q-NKs" secondAttribute="trailing" id="Ny9-wa-I1Y"/>
+                    </constraints>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="vld-fT-md8" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="Mcv-KF-sjM"/>
+                <constraint firstAttribute="bottom" secondItem="vld-fT-md8" secondAttribute="bottom" id="Yyl-jH-mkt"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="vld-fT-md8" secondAttribute="trailing" id="ZV5-HK-rxd"/>
+                <constraint firstItem="vld-fT-md8" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="g5z-1H-gv1"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="131.91964285714286" y="152.17391304347828"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="logo" width="1024" height="1024"/>
+        <namedColor name="main">
+            <color red="0.0" green="0.68235294117647061" blue="0.87450980392156863" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

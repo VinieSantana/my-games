@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="gTV-IL-0wX" customClass="OnboardingCollectionViewCell" customModule="MyGames" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="260" height="509"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="260" height="509"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hfh-4R-ke8">
+                        <rect key="frame" x="20" y="0.0" width="220" height="41.5"/>
+                        <color key="backgroundColor" name="main"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="41.5" id="aiS-lq-Ase"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="showroomScreen" translatesAutoresizingMaskIntoConstraints="NO" id="fp9-H3-BHf">
+                        <rect key="frame" x="0.0" y="41.5" width="260" height="467.5"/>
+                    </imageView>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="fp9-H3-BHf" secondAttribute="bottom" id="1dz-ph-qEI"/>
+                <constraint firstItem="hfh-4R-ke8" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="3Uk-ae-iXu"/>
+                <constraint firstAttribute="trailing" secondItem="hfh-4R-ke8" secondAttribute="trailing" constant="20" id="E9m-nu-zce"/>
+                <constraint firstItem="fp9-H3-BHf" firstAttribute="top" secondItem="hfh-4R-ke8" secondAttribute="bottom" id="Jzu-nQ-gMY"/>
+                <constraint firstItem="hfh-4R-ke8" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="20" id="a7t-uq-1ky"/>
+                <constraint firstAttribute="trailing" secondItem="fp9-H3-BHf" secondAttribute="trailing" id="ayj-J2-CZQ"/>
+                <constraint firstItem="fp9-H3-BHf" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="rlZ-5m-Iej"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="260" height="509"/>
+            <connections>
+                <outlet property="ivScreenshot" destination="fp9-H3-BHf" id="3tI-eK-n6w"/>
+                <outlet property="lbTitle" destination="hfh-4R-ke8" id="lay-eF-WjD"/>
+            </connections>
+            <point key="canvasLocation" x="284.05797101449275" y="251.45089285714283"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="showroomScreen" width="862" height="1788"/>
+        <namedColor name="main">
+            <color red="0.0" green="0.68235294117647061" blue="0.87450980392156863" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

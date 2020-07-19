@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Va1-lO-3Vf">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="FkX-jz-4aJ">
+            <objects>
+                <viewController id="WGa-lN-5Eb" customClass="MainViewController" customModule="MyGames" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Jvo-ES-1gq">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HiG-XS-si2">
+                                <rect key="frame" x="172.66666666666666" y="316.66666666666669" width="69" height="317.00000000000006"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="WjH-tW-TLs">
+                                        <rect key="frame" x="-65.666666666666657" y="20" width="200" height="128"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="128" id="M2J-ws-hrN"/>
+                                            <constraint firstAttribute="width" constant="200" id="Rb8-jW-TKb"/>
+                                        </constraints>
+                                    </imageView>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Senha" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rg6-h8-6GA">
+                                        <rect key="frame" x="0.0" y="211.99999999999994" width="69" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E-mail" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cWR-V4-8tv">
+                                        <rect key="frame" x="0.0" y="168" width="69" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wYL-OS-O5f">
+                                        <rect key="frame" x="0.0" y="265.99999999999994" width="69" height="31"/>
+                                        <color key="backgroundColor" name="main"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="31" id="Iv7-zP-9OW"/>
+                                        </constraints>
+                                        <state key="normal" title="LOGIN">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="tryLogin:" destination="WGa-lN-5Eb" eventType="touchUpInside" id="xAW-wO-tiH"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="cWR-V4-8tv" firstAttribute="top" secondItem="WjH-tW-TLs" secondAttribute="bottom" constant="20" id="0KX-xt-hAN"/>
+                                    <constraint firstAttribute="trailing" secondItem="cWR-V4-8tv" secondAttribute="trailing" id="2Ch-8z-E1C"/>
+                                    <constraint firstItem="rg6-h8-6GA" firstAttribute="leading" secondItem="cWR-V4-8tv" secondAttribute="leading" id="6tL-fG-RJU"/>
+                                    <constraint firstItem="cWR-V4-8tv" firstAttribute="centerX" secondItem="WjH-tW-TLs" secondAttribute="centerX" id="8bp-q1-bOS"/>
+                                    <constraint firstItem="wYL-OS-O5f" firstAttribute="leading" secondItem="rg6-h8-6GA" secondAttribute="leading" id="Bo0-Bh-xqX"/>
+                                    <constraint firstItem="rg6-h8-6GA" firstAttribute="top" secondItem="cWR-V4-8tv" secondAttribute="bottom" constant="10" id="Brx-m3-l0Y"/>
+                                    <constraint firstItem="cWR-V4-8tv" firstAttribute="leading" secondItem="HiG-XS-si2" secondAttribute="leading" id="RRt-Gi-ZP3"/>
+                                    <constraint firstItem="WjH-tW-TLs" firstAttribute="centerX" secondItem="HiG-XS-si2" secondAttribute="centerX" id="UcI-c3-Exs"/>
+                                    <constraint firstItem="rg6-h8-6GA" firstAttribute="trailing" secondItem="cWR-V4-8tv" secondAttribute="trailing" id="p9n-hv-4L4"/>
+                                    <constraint firstItem="wYL-OS-O5f" firstAttribute="top" secondItem="rg6-h8-6GA" secondAttribute="bottom" constant="20" id="qr3-H9-DBt"/>
+                                    <constraint firstItem="wYL-OS-O5f" firstAttribute="trailing" secondItem="rg6-h8-6GA" secondAttribute="trailing" id="s8c-CX-5fE"/>
+                                    <constraint firstItem="WjH-tW-TLs" firstAttribute="top" secondItem="HiG-XS-si2" secondAttribute="top" constant="20" id="wkK-Uc-eOL"/>
+                                    <constraint firstAttribute="height" constant="317" id="yFu-PW-HBw"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="HiG-XS-si2" firstAttribute="centerX" secondItem="oym-w2-0YB" secondAttribute="centerX" id="36z-fa-3ZK"/>
+                            <constraint firstItem="HiG-XS-si2" firstAttribute="centerY" secondItem="oym-w2-0YB" secondAttribute="centerY" id="Rhe-k7-a0u"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="oym-w2-0YB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="E3k-cx-nGY"/>
+                    <connections>
+                        <outlet property="containerView" destination="HiG-XS-si2" id="M1U-fD-htl"/>
+                        <outlet property="loginButton" destination="wYL-OS-O5f" id="VrJ-vS-wFH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hNa-AP-Dt7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1050.7246376811595" y="57.589285714285708"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="npv-83-uas">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Va1-lO-3Vf" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Ntp-KG-rnZ">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="WGa-lN-5Eb" kind="relationship" relationship="rootViewController" id="PTg-dn-YxQ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7gc-ca-n94" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="142.02898550724638" y="57.589285714285708"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="logo" width="1024" height="1024"/>
+        <namedColor name="main">
+            <color red="0.0" green="0.68235294117647061" blue="0.87450980392156863" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

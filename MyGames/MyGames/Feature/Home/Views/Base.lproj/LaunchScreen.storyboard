@@ -15,16 +15,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LaunchScreen" translatesAutoresizingMaskIntoConstraints="NO" id="hKM-wi-Hag">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LaunchScreen" translatesAutoresizingMaskIntoConstraints="NO" id="SLu-Sv-GnE">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="hKM-wi-Hag" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="95y-Cd-5Zb"/>
-                            <constraint firstItem="hKM-wi-Hag" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="Ycg-El-fsR"/>
-                            <constraint firstAttribute="bottom" secondItem="hKM-wi-Hag" secondAttribute="bottom" id="a5o-gq-ijd"/>
-                            <constraint firstItem="hKM-wi-Hag" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="rUn-G9-Oco"/>
+                            <constraint firstAttribute="trailing" secondItem="SLu-Sv-GnE" secondAttribute="trailing" id="CEn-jK-rbK"/>
+                            <constraint firstAttribute="bottom" secondItem="SLu-Sv-GnE" secondAttribute="bottom" id="FD4-My-Ta9"/>
+                            <constraint firstItem="SLu-Sv-GnE" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="cO4-AV-ssv"/>
+                            <constraint firstItem="SLu-Sv-GnE" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="iSc-Uo-Bes"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
